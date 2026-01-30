@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+scikit-learn
+numpy
+pandas
+joblib
+sqlalchemy
+pymysql
+mysqlclient
+pydantic
+python-multipart
+python-dotenv
+pyyaml
+pytest
+python-jose
