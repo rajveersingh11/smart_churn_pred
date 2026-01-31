@@ -12,4 +12,5 @@ python-multipart
 python-dotenv
 pyyaml
 pytest
+httpx
 python-jose
