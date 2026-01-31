@@ -1,11 +1,29 @@
 from fastapi import FastAPI
 
 from app.api import churn, auth, health
+from app.core.logging import setup_logger
+from app.core.config import validate_config
 
-def creat_app():
+
+# Setup Logging (FIRST)
+
+
+logger = setup_logger()
+logger.info("Churn API Started")
+
+
+# Validate Config
+
+validate_config()
+
+
+# Create App
+
+
+def create_app():
 
     app = FastAPI(
-        titel="Smart Churn Prediction API",
+        title="Smart Churn Prediction API",
         version="1.0"
     )
 
@@ -15,9 +33,14 @@ def creat_app():
 
     return app
 
-app = creat_app()
+
+app = create_app()
+
+
+# Run Server (Local Only)
 
 if __name__ == "__main__":
 
     import uvicorn
+
     uvicorn.run("app.main:app", reload=True)

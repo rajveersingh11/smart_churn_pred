@@ -7,25 +7,21 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# =========================
 # Base Directory
-# =========================
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
-# =========================
+
 # Environment
-# =========================
 
 ENV = os.getenv("ENV", "development")
 
 DEBUG = ENV == "development"
 
 
-# =========================
 # Security Config
-# =========================
+
 
 SECRET_KEY = os.getenv("SECRET_KEY", "smart-churn-secret-key")
 
@@ -36,9 +32,7 @@ TOKEN_EXPIRE_MINUTES = int(
 )
 
 
-# =========================
 # Server Config
-# =========================
 
 APP_NAME = "Smart Churn Prediction API"
 
@@ -49,9 +43,8 @@ HOST = os.getenv("HOST", "0.0.0.0")
 PORT = int(os.getenv("PORT", 8000))
 
 
-# =========================
+
 # Database Config
-# =========================
 
 DB_HOST = os.getenv("DB_HOST", "localhost")
 
