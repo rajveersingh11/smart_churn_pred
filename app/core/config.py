@@ -103,6 +103,29 @@ FEATURE_ORDER = [
 ]
 
 
+# ML Hyperparameters
+
+
+LOGISTIC_PARAMS = {
+    "max_iter": 1000,
+    "random_state": 42
+}
+
+DECISION_TREE_PARAMS = {
+    "max_depth": 6,
+    "min_samples_split": 4,
+    "random_state": 42
+}
+
+RANDOM_FOREST_PARAMS = {
+    "n_estimators": 200,
+    "max_depth": 12,
+    "random_state": 42,
+    "n_jobs": -1
+}
+
+
+
 
 # Validation
 
@@ -120,6 +143,7 @@ def validate_config():
         raise FileNotFoundError(
             f"Data directory missing: {DATA_DIR}"
         )
+    
 
 
 # Print (Debug Only)
